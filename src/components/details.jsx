@@ -27,12 +27,12 @@ const tourFormat = [
   { sub: "Rating Cut-offs", format: "WESPA-1500" },
 ];
 const sponsors = [
-  { id: 1, name: "Sponsor 1", logo: "src/wespa.jpeg" },
-  { id: 2, name: "Sponsor 2", logo: "src/wespa.jpeg" },
-  { id: 3, name: "Sponsor 3", logo: "src/wespa.jpeg" },
-  { id: 4, name: "Sponsor 4", logo: "src/wespa.jpeg" },
-  { id: 5, name: "Sponsor 5", logo: "src/wespa.jpeg" },
-  { id: 6, name: "Sponsor 6", logo: "src/wespa.jpeg" },
+  { id: 1, name: "Sponsor 1", logo: "/Nasal-Asc/Wespa.jpeg" },
+  { id: 2, name: "Sponsor 2", logo: "/Nasal-Asc/Wespa.jpeg" },
+  { id: 3, name: "Sponsor 3", logo: "/Nasal-Asc/Wespa.jpeg" },
+  { id: 4, name: "Sponsor 4", logo: "/Nasal-Asc/Wespa.jpeg" },
+  { id: 5, name: "Sponsor 5", logo: "/Nasal-Asc/Wespa.jpeg" },
+  { id: 6, name: "Sponsor 6", logo: "/Nasal-Asc/Wespa.jpeg"},
 ];
 
 export default function Details() {
@@ -121,16 +121,21 @@ export default function Details() {
               <li>
                 Make an online payment to NASAL - <br />
                 <span className="italic">
-                  We recommend that you notify the Local Organising Committee <br /> so
-                  that we can mark you as paid.
+                  We recommend that you notify the Local Organising Committee{" "}
+                  <br /> so that we can mark you as paid.
                 </span>
               </li>
               <li>
                 Transfer the funds via wire transfer -
                 <span className="italic">
-                  Contact the <a href="mailto:asc-nasal@gmaiil.com" 
-                  className="font-bold text-blue-800 hover:text-blue-600">Committee</a> <br />  for instructions and
-                  recipient information.
+                  Contact the{" "}
+                  <a
+                    href="mailto:asc-nasal@gmaiil.com"
+                    className="font-bold text-blue-800 hover:text-blue-600"
+                  >
+                    Committee
+                  </a>{" "}
+                  <br /> for instructions and recipient information.
                 </span>
               </li>
             </ul>
@@ -209,10 +214,7 @@ export default function Details() {
           ))}
         </div>
       </section>
-      <section
-        id="accommodation"
-        className=" px-6 md:px-16 py-14 bg-gray-100"
-      >
+      <section id="accommodation" className=" px-6 md:px-16 py-14 bg-gray-100">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Accommodation Section */}
           <div className="md:w-1/2">
