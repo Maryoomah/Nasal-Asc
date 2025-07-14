@@ -16,9 +16,7 @@ export default function HomePage() {
           className="w-28 mb-4 "
         />
         <div class="flex gap-4">
-          <p className="text-white font-semibold hover:undeline">
-            Call us :+231-34567
-          </p>
+        
           <a
             href="https://instagram.com"
             target="_blank"
@@ -62,7 +60,7 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 bg-blue-950 text-yellow-400 py-4 px-6 rounded-lg shadow-lg max-w-md mx-auto">
-            <p className="text-xl font-bold mb-2">Time Left:</p>
+            <p className="text-xl font-bold mb-2">Tournament Countdown:</p>
             <CountdownTimer />
           </div>
           <button className="mt-8 bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">
@@ -73,7 +71,7 @@ export default function HomePage() {
         {/* Image */}
         <div className="md:w-1/2 w-full flex justify-center mr-10">
           <img
-            src="/Nasal-Asc/scrabble.jpeg"
+            src="/Nasal-Asc/hero img.jpg"
             alt="Scrabble Game"
             className="w-full max-w-md md:max-w-full h-auto rounded-xl object-cover shadow-lg"
           />

@@ -32,7 +32,7 @@ const sponsors = [
   { id: 3, name: "Sponsor 3", logo: "/Nasal-Asc/Wespa.jpeg" },
   { id: 4, name: "Sponsor 4", logo: "/Nasal-Asc/Wespa.jpeg" },
   { id: 5, name: "Sponsor 5", logo: "/Nasal-Asc/Wespa.jpeg" },
-  { id: 6, name: "Sponsor 6", logo: "/Nasal-Asc/Wespa.jpeg"},
+  { id: 6, name: "Sponsor 6", logo: "/Nasal-Asc/Wespa.jpeg" },
 ];
 
 export default function Details() {
@@ -190,7 +190,8 @@ export default function Details() {
           rounded-md my-3 "
           >
             <p className="space-x-2  font-bold">
-              65% refund will be made if is done 2 months before the event.
+              65% refund will be made if withdrawal is done 2 months before the
+              event.
             </p>
             <p>All requests for cancellation are subject to a fee of $25.</p>
           </div>
