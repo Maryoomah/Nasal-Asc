@@ -197,8 +197,8 @@ export default function Details() {
           </div>
         </div>
       </section>
-      <section id="format" className="px-6 py-6 md:px-16 bg-gray-400">
-        <h1 className="text-3xl font-bold mb-6 text-center text-blue-900">
+      <section id="format" className="mt-10 px-6 py-6 md:px-16 bg-gray-400">
+        <h1 className="text-3xl font-bold my-6 text-center text-blue-900">
           Tournament Format
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
