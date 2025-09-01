@@ -3,12 +3,12 @@ import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
 const dateDeets = [
   { date: "November 1, 2024", deet: "Registration commences" },
-  { date: "July 31, 2025", deet: "End of regular registration" },
+  { date: "September 21, 2026", deet: "Registration Closes" },
   { date: "October 18-20, 2026", deet: "Expected Arrival" },
+    { date: "October 24, 2026", deet: "PANASA AGM" }
 ];
 const feeData = [
-  { fee: "150", event: "Early Bird", timeline: "23rd Nov - 30th Nov 2025" },
-  { fee: "150", event: "Side Event", timeline: "23rd Nov - 30th Nov 2025" },
+
   { fee: "150", event: "Main Event", timeline: "23rd Nov - 30th Nov 2025" },
   {
     fee: "Additional 30",
@@ -17,14 +17,14 @@ const feeData = [
   },
 ];
 const tourFormat = [
-  { sub: "Games", format: "28 rounds for main event; 4 rounds for Early Bird" },
+  { sub: "Games", format: "32 rounds for main event" },
   { sub: "Divisions", format: "Two divisions.Qualified players can play up" },
-  { sub: "Pairing System", format: "Australian Swiss and Lagged Swiss" },
-  { sub: "Lexicon", format: "Collins Scrabble Words (CSW2023)" },
+  { sub: "Pairing System", format: "Swiss/Exagony/KOTH" },
+  { sub: "Lexicon", format: "Collins Scrabble Words (CSW2024)" },
   { sub: "Challenge", format: "5-point penalty per word challenge" },
   { sub: "Software", format: "Tournament Scrabble Helper (TSH)" },
-  { sub: "Ratings", format: "Ratings from WESPA" },
-  { sub: "Rating Cut-offs", format: "WESPA-1500" },
+  { sub: "Ratings", format: "Ratings from PANASA and  WESPA" },
+  // { sub: "Rating Cut-offs", format: "WESPA-1500" },
 ];
 const sponsors = [
   { id: 1, name: "Sponsor 1", logo: "/Nasal-Asc/Wespa.jpeg" },
@@ -67,12 +67,12 @@ export default function Details() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="px-4 py-2 border-b">Opening Event</td>
-                <td className="px-4 py-2 border-b">October 21, 2026</td>
+                <tr>
+                <td className="px-4 py-2 border-b">Arrival of Players</td>
+                <td className="px-4 py-2 border-b">October 18-21, 2026</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border-b">Last Chance Qualifiers</td>
+                <td className="px-4 py-2 border-b">Opening Ceremony</td>
                 <td className="px-4 py-2 border-b">October 21, 2026</td>
               </tr>
               <tr>
@@ -80,7 +80,7 @@ export default function Details() {
                 <td className="px-4 py-2 border-b">October 22–25, 2026</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border-b">Closing Event</td>
+                <td className="px-4 py-2 border-b">Closing Ceremony</td>
                 <td className="px-4 py-2 border-b">October 25, 2026</td>
               </tr>
             </tbody>
