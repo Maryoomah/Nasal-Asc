@@ -5,10 +5,9 @@ const dateDeets = [
   { date: "November 1, 2024", deet: "Registration commences" },
   { date: "September 21, 2026", deet: "Registration Closes" },
   { date: "October 18-20, 2026", deet: "Expected Arrival" },
-    { date: "October 24, 2026", deet: "PANASA AGM" }
+  { date: "October 24, 2026", deet: "PANASA AGM" },
 ];
 const feeData = [
-
   { fee: "150", event: "Main Event", timeline: "23rd Nov - 30th Nov 2025" },
   {
     fee: "Additional 30",
@@ -24,7 +23,6 @@ const tourFormat = [
   { sub: "Challenge", format: "5-point penalty per word challenge" },
   { sub: "Software", format: "Tournament Scrabble Helper (TSH)" },
   { sub: "Ratings", format: "Ratings from PANASA and  WESPA" },
-  // { sub: "Rating Cut-offs", format: "WESPA-1500" },
 ];
 const sponsors = [
   { id: 1, name: "Sponsor 1", logo: "/Nasal-Asc/Wespa.jpeg" },
@@ -67,7 +65,7 @@ export default function Details() {
               </tr>
             </thead>
             <tbody>
-                <tr>
+              <tr>
                 <td className="px-4 py-2 border-b">Arrival of Players</td>
                 <td className="px-4 py-2 border-b">October 18-21, 2026</td>
               </tr>
