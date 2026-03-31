@@ -1,54 +1,60 @@
 import { useState, useEffect } from "react";
 
-export default function CountdownTimer () {
-    const targetDate = new Date("October 21,2026 00:00:00").getTime();
-    const calculateTimeLeft = () => {
-        const present = new Date().getTime();
-        const difference = targetDate - present;
+export default function CountdownTimer({ targetDate }) {
+  const calculateTimeLeft = () => {
+    const now = new Date().getTime();
+    const difference = new Date(targetDate).getTime() - now;
 
-        if (difference <= 0) {
-            return null;
-        }
-        return {
-            days: Math.floor(difference/ (1000*60*60*24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-      seconds: Math.floor((difference % (1000 * 60)) / 1000),
+    if (difference <= 0) return null;
 
-        };
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
     };
+  };
 
-      const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  // Update the timer every second
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
   useEffect(() => {
     const timer = setInterval(() => {
-      const updatedTime = calculateTimeLeft();
-      setTimeLeft(updatedTime);
+      const updated = calculateTimeLeft();
+      setTimeLeft(updated);
 
-      if (!updatedTime) {
-        clearInterval(timer); // Stop the countdown when time is up
-      }
+      if (!updated) clearInterval(timer);
     }, 1000);
 
-    return () => clearInterval(timer); // Cleanup on component unmount
-  }, []);
+    return () => clearInterval(timer);
+  }, [targetDate]);
 
-  // Display if countdown is finished
+  const format = (num) => String(num).padStart(2, "0");
+
   if (!timeLeft) {
-    return <p>Countdown finished!</p>;
+    return (
+      <p className="text-center text-green-400 font-semibold">
+        🎉 Tournament has started!
+      </p>
+    );
   }
-  return (
-    <div className=" flex flex-row justify-center items-center gap-4 text-yellow-400 text-2xl font-semibold mt-10">
-        <p className="font-semibold ">
-          {timeLeft.days} <span className="text-white text-base ml-1 italic">d</span> 
-        </p>  <p className="font-semibold ">
-          {timeLeft.hours} <span className="text-white text-base ml-1 italic">h</span>  
-        </p>  <p className="font-semibold ">
-           {timeLeft.minutes} <span className="text-white text-base ml-1 italic">m</span> 
-       
-        </p>  <p className="font-semibold ">
-          {timeLeft.seconds} <span className="text-white text-base ml-1 italic">s</span>  
-        </p>
+
+  const TimeBox = ({ value, label }) => (
+    <div className="bg-black/40 backdrop-blur-md px-4 py-3 rounded-lg text-center shadow-md">
+      <p className="text-2xl md:text-3xl font-bold text-yellow-400">
+        {format(value)}
+      </p>
+      <span className="text-xs uppercase text-gray-300 tracking-wide">
+        {label}
+      </span>
     </div>
-  )
+  );
+
+  return (
+    <div className="flex justify-center gap-3 md:gap-5">
+      <TimeBox value={timeLeft.days} label="Days" />
+      <TimeBox value={timeLeft.hours} label="Hours" />
+      <TimeBox value={timeLeft.minutes} label="Minutes" />
+      <TimeBox value={timeLeft.seconds} label="Seconds" />
+    </div>
+  );
 }

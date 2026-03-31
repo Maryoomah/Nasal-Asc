@@ -1,17 +1,17 @@
 import "./index.css";
 import HomePage from "./components/home";
-import InfoSection from "./components/info-card";
-import Details from "./components/details";
-import Footer from "./components/footer";
+
+import GameRegistration from "./register";
+import { Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
     <>
-      <HomePage />
-      <InfoSection />
-      <Details />
-            <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
 
+        <Route path="/registration" element={<GameRegistration />} />
+      </Routes>
     </>
   );
 }

@@ -5,78 +5,86 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import CountdownTimer from "./countdown";
+import Details from "./details";
+import Footer from "./footer";
 
 export default function HomePage() {
-  return (
-    <div className="bg-blue-950">
-      <header className="flex justify-between items-center pt-5 px-5">
-        <img
-          src="/Nasal-Asc/logo.jpg"
-          alt="Nasal-Logo"
-          className="w-28 mb-4 "
-        />
-        <div class="flex gap-4">
-        
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className=" text-white hover:text-blue-400"
-            />
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faFacebook}
-              className=" text-white hover:text-blue-400"
-            />
-          </a>
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon
-              icon={faXTwitter}
-              className=" text-white hover:text-blue-400"
-            />
-          </a>{" "}
-        </div>
-      </header>
-      {/* hero section */}
-      <section className="bg-black text-center py-20 px-6 flex flex-col md:flex-row md:items-center justify-center gap-10 md:gap-6 text-white md:px-16">
-        {/* Text content */}
-        <div className="md:w-1/2">
-          <h1 className="text-4xl font-bold mb-4">
-            Africa Scrabble Championship
-          </h1>
-          <p className="text-4xl font-bold text-yellow-500 mb-2">
-            Liberia 2026
-          </p>
-          <p className="text-lg mb-6">
-            A gathering of Africa's finest word warriors
-          </p>
+  return ( <main>
+<div className="bg-gradient-to-b from-blue-950 via-black to-black min-h-screen text-white">
+  
+  {/* HEADER */}
+  <header className="flex justify-between items-center py-5 px-6 md:px-12">
+    <img
+      src="/Nasal-Asc/logo.jpg"
+      alt="Nasal-Logo"
+      className="w-24 md:w-28"
+    />
 
-          <div className="mt-10 bg-blue-950 text-yellow-400 py-4 px-6 rounded-lg shadow-lg max-w-md mx-auto">
-            <p className="text-xl font-bold mb-2">Tournament Countdown:</p>
-            <CountdownTimer />
-          </div>
-          <button className="mt-8 bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">
-            Get Ready
-          </button>
-        </div>
-
-        {/* Image */}
-        <div className="md:w-1/2 w-full flex justify-center mr-10">
-          <img
-            src="/Nasal-Asc/hero img.jpg"
-            alt="Scrabble Game"
-            className="w-full max-w-md md:max-w-full h-auto rounded-xl object-cover shadow-lg"
-          />
-        </div>
-      </section>
+    <div className="flex gap-5 text-lg">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon className="hover:text-yellow-400 transition" icon={faInstagram} />
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon className="hover:text-yellow-400 transition" icon={faFacebook} />
+      </a>
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon className="hover:text-yellow-400 transition" icon={faXTwitter} />
+      </a>
     </div>
+  </header>
+
+  {/* HERO */}
+  <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 gap-12">
+    
+    {/* TEXT */}
+    <div className="md:w-1/2 text-center md:text-left">
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+        Africa Scrabble Championship
+      </h1>
+
+      <p className="text-3xl md:text-4xl font-bold text-yellow-400 mt-2">
+        Liberia 2026
+      </p>
+
+      <p className="text-lg text-gray-300 mt-4">
+        A gathering of Africa's finest word warriors
+      </p>
+
+      {/* Countdown Card */}
+      <div className="mt-8 bg-blue-900/40 backdrop-blur-lg border border-blue-800 p-6 rounded-xl shadow-xl max-w-md mx-auto md:mx-0">
+        <p className="text-lg font-semibold mb-4 text-white">
+          Tournament Countdown
+        </p>
+
+        <CountdownTimer targetDate="October 21, 2026 00:00:00" />
+      </div>
+
+      {/* CTA */}
+      <button className="mt-8 bg-yellow-400 text-black font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition duration-300">
+        Register Now
+      </button>
+    </div>
+
+    {/* IMAGE */}
+    <div className="md:w-1/2 flex justify-center relative">
+      <div className="absolute inset-0 bg-blue-900/20 blur-2xl rounded-full"></div>
+      
+      <img
+        src="/Nasal-Asc/hero img.jpg"
+        alt="Scrabble Game"
+        className="relative w-full max-w-md md:max-w-lg rounded-xl shadow-2xl object-cover"
+      />
+    </div>
+  </section>
+</div>
+
+      {/* details */}
+      <section>
+        <Details />
+      </section>
+      <section>
+        <Footer />
+      </section>
+    </main>
   );
 }
