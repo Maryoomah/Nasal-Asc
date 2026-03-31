@@ -50,7 +50,7 @@ export default function Details() {
           <div className="relative border-l-2 border-blue-300 pl-6 space-y-6">
             {dateDeets.map((item, index) => (
               <div key={index} className="relative">
-                <div className="absolute -left-[11px] top-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white"></div>
+                <div className="absolute -left-[24px] top-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white"></div>
 
                 <p className="font-semibold text-lg">{item.date}</p>
                 <p className="text-blue-200 text-sm">{item.deet}</p>
